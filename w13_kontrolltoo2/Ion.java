@@ -1,3 +1,4 @@
+package app;
 
 public class Ion implements Ions {
 
@@ -13,19 +14,17 @@ public class Ion implements Ions {
 
     @Override
     public void getInfo() {
-        if(charge == 1){
-            System.out.println("Nimetus: " + name + ", molekuraalmass: " + molecularWeight + " ,laeng: +.");
-        }
-        if(charge == -1){
-            System.out.println("Nimetus: " + name + ", molekuraalmass: " + molecularWeight + " ,laeng: -.");
-        }
-        if(charge == 2){
-            System.out.println("Nimetus: " + name + ", molekuraalmass: " + molecularWeight + " ,laeng: 2+.");
-        }
-        if(charge == -2){
-            System.out.println("Nimetus: " + name + ", molekuraalmass: " + molecularWeight + " ,laeng: 2-.");
+            System.out.println("Nimetus: " + name + ", molekuraalmass: " + molecularWeight + " ,laeng: " + charge);
         }
         
+
+    @Override
+    public double getMolecularMass() {
+        return molecularWeight;
     }
-    
+
+    @Override
+    public int getCharge() {
+        return charge;
+    }
 }
