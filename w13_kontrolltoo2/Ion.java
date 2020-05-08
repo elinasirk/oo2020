@@ -1,30 +1,33 @@
-package app;
 
-public class Ion implements Ions {
+public class Ion implements SubstanceInterface {
 
-    private String name;
-    private double molecularWeight;
-    private int charge;
+    private int ionCharge1;
+    private int ionCharge2;
+    private String ionName1;
+    private String ionName2;
 
-    public Ion(String name, double molecularWeight, int charge) {
-        this.name = name;
-        this.molecularWeight = molecularWeight;
-        this.charge = charge;
+
+    public Ion(int ionCharge1, int ionCharge2, String ionName1, String ionName2) {
+        this.ionCharge1 = ionCharge1;
+        this.ionCharge2 = ionCharge2;
+        this.ionName1 = ionName1;
+        this.ionName2 = ionName2;
     }
 
-    @Override
-    public void getInfo() {
-            System.out.println("Nimetus: " + name + ", molekuraalmass: " + molecularWeight + " ,laeng: " + charge);
-        }
-        
-
-    @Override
-    public double getMolecularMass() {
-        return molecularWeight;
+    public int getCharge1() {
+        return ionCharge1;
     }
 
-    @Override
-    public int getCharge() {
-        return charge;
+    public int getCharge2() {
+        return ionCharge2;
     }
+    
+    public String getName1(){
+        return ionName1;
+    }
+
+    public String getName2(){
+        return ionName2;
+    }
+
 }
